@@ -1,0 +1,71 @@
+Match Number,Round Number,Date,Location,Home Team,Away Team,Result
+1,1,22-03-2024 14:30,MA Chidambaram Stadium,Chennai Super Kings,Royal Challengers Bengaluru,Chennai Super Kings
+2,1,23-03-2024 10:00,PCA New Stadium,Punjab Kings,Delhi Capitals,Punjab Kings
+3,1,23-03-2024 14:00,Eden Gardens,Kolkata Knight Riders,Sunrisers Hyderabad,Kolkata Knight Riders
+4,1,24-03-2024 10:00,Sawai Mansingh Stadium,Rajasthan Royals,Lucknow Super Giants,Rajasthan Royals
+5,1,24-03-2024 14:00,Narendra Modi Stadium,Gujarat Titans,Mumbai Indians,Gujarat Titans
+6,1,25-03-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Punjab Kings,Royal Challengers Bengaluru
+7,1,26-03-2024 14:00,MA Chidambaram Stadium,Chennai Super Kings,Gujarat Titans,Chennai Super Kings
+8,1,27-03-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Mumbai Indians,Sunrisers Hyderabad
+9,1,28-03-2024 14:00,Sawai Mansingh Stadium,Rajasthan Royals,Delhi Capitals,Rajasthan Royals
+10,1,29-03-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Kolkata Knight Riders,Kolkata Knight Riders
+11,2,30-03-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Punjab Kings,Lucknow Super Giants
+12,2,31-03-2024 10:00,Narendra Modi Stadium,Gujarat Titans,Sunrisers Hyderabad,Gujarat Titans
+13,2,31-03-2024 14:00,ACA–VDCA Cricket Stadium,Delhi Capitals,Chennai Super Kings,Delhi Capitals
+14,2,01-04-2024 14:00,Wankhede Stadium,Mumbai Indians,Rajasthan Royals,Rajasthan Royals
+15,2,02-04-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Lucknow Super Giants,Lucknow Super Giants
+16,2,03-04-2024 14:00,ACA–VDCA Cricket Stadium,Delhi Capitals,Kolkata Knight Riders,Kolkata Knight Riders
+17,2,04-04-2024 14:00,Narendra Modi Stadium,Gujarat Titans,Punjab Kings,Punjab Kings
+18,2,05-04-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Chennai Super Kings,Sunrisers Hyderabad
+19,2,06-04-2024 14:00,Sawai Mansingh Stadium,Rajasthan Royals,Royal Challengers Bengaluru,Rajasthan Royals
+20,2,07-04-2024 10:00,Wankhede Stadium,Mumbai Indians,Delhi Capitals,Mumbai Indians
+21,2,07-04-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Gujarat Titans,Lucknow Super Giants
+22,3,08-04-2024 14:00,MA Chidambaram Stadium,Chennai Super Kings,Kolkata Knight Riders,Chennai Super Kings
+23,3,09-04-2024 14:00,PCA New Stadium,Punjab Kings,Sunrisers Hyderabad,Sunrisers Hyderabad
+24,3,10-04-2024 14:00,Sawai Mansingh Stadium,Rajasthan Royals,Gujarat Titans,Gujarat Titans
+25,3,11-04-2024 14:00,Wankhede Stadium,Mumbai Indians,Royal Challengers Bengaluru,Mumbai Indians
+26,3,12-04-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Delhi Capitals,Delhi Capitals
+27,3,13-04-2024 14:00,PCA New Stadium,Punjab Kings,Rajasthan Royals,Rajasthan Royals
+28,3,14-04-2024 10:00,Eden Gardens,Kolkata Knight Riders,Lucknow Super Giants,Kolkata Knight Riders
+29,3,14-04-2024 14:00,Wankhede Stadium,Mumbai Indians,Chennai Super Kings,Chennai Super Kings
+30,4,15-04-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Sunrisers Hyderabad,Sunrisers Hyderabad
+32,4,16-04-2024 14:00,Eden Gardens,Kolkata Knight Riders,Rajasthan Royals,Rajasthan Royals
+31,4,17-04-2024 14:00,Narendra Modi Stadium,Gujarat Titans,Delhi Capitals,Delhi Capitals
+33,4,18-04-2024 14:00,PCA New Stadium,Punjab Kings,Mumbai Indians,Mumbai Indians
+34,4,19-04-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Chennai Super Kings,Lucknow Super Giants
+35,4,20-04-2024 14:00,Arun Jaitley Stadium,Delhi Capitals,Sunrisers Hyderabad,Sunrisers Hyderabad
+36,4,21-04-2024 10:00,Eden Gardens,Kolkata Knight Riders,Royal Challengers Bengaluru,Kolkata Knight Riders
+37,4,21-04-2024 13:45,PCA New Stadium,Punjab Kings,Gujarat Titans,Gujarat Titans
+38,5,22-04-2024 14:00,Sawai Mansingh Stadium,Rajasthan Royals,Mumbai Indians,Rajasthan Royals
+39,5,23-04-2024 14:00,MA Chidambaram Stadium,Chennai Super Kings,Lucknow Super Giants,Lucknow Super Giants
+40,5,24-04-2024 14:00,Arun Jaitley Stadium,Delhi Capitals,Gujarat Titans,Delhi Capitals
+41,5,25-04-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Royal Challengers Bengaluru,Royal Challengers Bengaluru
+42,5,26-04-2024 14:00,Eden Gardens,Kolkata Knight Riders,Punjab Kings,Punjab Kings
+43,5,27-04-2024 10:00,Arun Jaitley Stadium,Delhi Capitals,Mumbai Indians,Delhi Capitals
+44,5,27-04-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Rajasthan Royals,Rajasthan Royals
+45,5,28-04-2024 10:00,Narendra Modi Stadium,Gujarat Titans,Royal Challengers Bengaluru,Royal Challengers Bengaluru
+46,5,28-04-2024 14:00,MA Chidambaram Stadium,Chennai Super Kings,Sunrisers Hyderabad,Chennai Super Kings
+47,6,29-04-2024 14:00,Eden Gardens,Kolkata Knight Riders,Delhi Capitals,Kolkata Knight Riders
+48,6,30-04-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Mumbai Indians,Lucknow Super Giants
+49,6,01-05-2024 14:00,MA Chidambaram Stadium,Chennai Super Kings,Punjab Kings,Punjab Kings
+50,6,02-05-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Rajasthan Royals,Sunrisers Hyderabad
+51,6,03-05-2024 14:00,Wankhede Stadium,Mumbai Indians,Kolkata Knight Riders,Kolkata Knight Riders
+52,6,04-05-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Gujarat Titans,Royal Challengers Bengaluru
+53,6,05-05-2024 10:00,Himachal Pradesh Cricket Association Stadium,Punjab Kings,Chennai Super Kings,Chennai Super Kings
+54,6,05-05-2024 14:00,BRSABV Ekana Cricket Stadium,Lucknow Super Giants,Kolkata Knight Riders,
+55,7,06-05-2024 14:00,Wankhede Stadium,Mumbai Indians,Sunrisers Hyderabad,
+56,7,07-05-2024 14:00,Arun Jaitley Stadium,Delhi Capitals,Rajasthan Royals,
+57,7,08-05-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Lucknow Super Giants,
+58,7,09-05-2024 14:00,Himachal Pradesh Cricket Association Stadium,Punjab Kings,Royal Challengers Bengaluru,
+59,7,10-05-2024 14:00,Narendra Modi Stadium,Gujarat Titans,Chennai Super Kings,
+60,7,11-05-2024 14:00,Eden Gardens,Kolkata Knight Riders,Mumbai Indians,
+61,7,12-05-2024 10:00,MA Chidambaram Stadium,Chennai Super Kings,Rajasthan Royals,
+62,7,12-05-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Delhi Capitals,
+63,8,13-05-2024 14:00,Narendra Modi Stadium,Gujarat Titans,Kolkata Knight Riders,
+64,8,14-05-2024 14:00,Arun Jaitley Stadium,Delhi Capitals,Lucknow Super Giants,
+65,8,15-05-2024 14:00,Barsapara Cricket Stadium,Rajasthan Royals,Punjab Kings,
+66,8,16-05-2024 14:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Gujarat Titans,
+67,8,17-05-2024 14:00,Wankhede Stadium,Mumbai Indians,Lucknow Super Giants,
+68,8,18-05-2024 14:00,M Chinnaswamy Stadium,Royal Challengers Bengaluru,Chennai Super Kings,
+69,8,19-05-2024 10:00,Rajiv Gandhi International Stadium,Sunrisers Hyderabad,Punjab Kings,
+70,8,19-05-2024 14:00,Barsapara Cricket Stadium,Rajasthan Royals,Kolkata Knight Riders,
