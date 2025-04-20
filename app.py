@@ -3,6 +3,7 @@ import random
 from collections import defaultdict
 import time
 import csv
+import json
 from tabulate import tabulate
 from itertools import product
 
@@ -10,11 +11,6 @@ from itertools import product
 def load_data(file_path):
     df = pd.read_csv(file_path)
     upcoming_matches = df[df['Result'].isnull()]
-
-    if upcoming_matches.empty:
-        print("No matches left for simulating.")
-        return None, None
-
     points_table = {
         'Kolkata Knight Riders': 0,
         'Royal Challengers Bengaluru': 0,
@@ -27,7 +23,6 @@ def load_data(file_path):
         'Lucknow Super Giants': 0,
         'Gujarat Titans': 0,
     }
-
     completed_matches = df[df['Result'].notnull()]
     for _, match in completed_matches.iterrows():
         result = match['Result']
@@ -36,7 +31,14 @@ def load_data(file_path):
             points_table[match['Away Team']] += 1
         elif result in points_table:
             points_table[result] += 2
-
+    # Save current points table to JSON file
+    sorted_points = dict(sorted(points_table.items(), key=lambda x: x[1], reverse=True))
+    with open('current_points_table.json', 'w') as f:
+        json.dump(sorted_points, f, indent=4)
+    print("Current points table saved to current_points_table.json")
+    if upcoming_matches.empty:
+        print("No matches left for simulating.")
+        return None, None
     return upcoming_matches, points_table
 
 # Simulate using all combinations (if match count is low)
@@ -85,8 +87,9 @@ def run_all_combinations(matches, base_points, qualifying_points):
     return qualification_percentages, team_scenarios
 
 # Simulate using random seeds (Monte Carlo fallback for large n)
-def simulate_tournament(matches, base_points, seed):
+def simulate_tournament_with_results(matches, base_points, seed):
     points = base_points.copy()
+    game_results = []
     random.seed(seed)
 
     for _, match in matches.iterrows():
@@ -96,10 +99,14 @@ def simulate_tournament(matches, base_points, seed):
 
         if result == 'Home':
             points[home_team] += 2
+            winner = home_team
         else:
             points[away_team] += 2
+            winner = away_team
 
-    return points
+        game_results.append(f"{home_team} vs {away_team}, Winner predicted: {winner}")
+
+    return points, game_results
 
 def get_game_results_for_simulation(matches):
     results = []
@@ -107,7 +114,6 @@ def get_game_results_for_simulation(matches):
         home_team = match['Home Team']
         away_team = match['Away Team']
         result = random.choice(['Home', 'Away'])
-
         winner = home_team if result == 'Home' else away_team
         results.append(f"{home_team} vs {away_team}, Winner predicted: {winner}")
     return results
@@ -115,14 +121,11 @@ def get_game_results_for_simulation(matches):
 def run_monte_carlo(matches, base_points, qualifying_points, simulations=50000):
     qualification_counts = defaultdict(int)
     team_scenarios = defaultdict(list)
-
     for sim_num in range(simulations):
-        sim_points = simulate_tournament(matches, base_points, sim_num)
-        game_results = get_game_results_for_simulation(matches)
-
+        sim_points, game_results = simulate_tournament_with_results(matches, base_points, sim_num)
+        #game_results = get_game_results_for_simulation(matches)
         # Now check qualification
         qualified_teams = [team for team, points in sim_points.items() if points >= qualifying_points]
-
         for team in qualified_teams:
             qualification_counts[team] += 1
             team_scenarios[team].append({
@@ -130,15 +133,13 @@ def run_monte_carlo(matches, base_points, qualifying_points, simulations=50000):
                 'Points': sim_points[team],
                 'Game Results': game_results
             })
-
     qualification_percentages = {
         team: (count / simulations) * 100
         for team, count in qualification_counts.items()
     }
-
     return qualification_percentages, team_scenarios
 
-def save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name):
+def save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name, qualifying_points):
     if team_name not in team_scenarios:
         print(f"No qualifying scenarios found for {team_name}.")
         return
@@ -148,6 +149,9 @@ def save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name):
         writer.writerow(['Simulation Number', 'Match', 'Winner'])
 
         for scenario in team_scenarios[team_name]:
+            if scenario['Points'] < qualifying_points:
+                continue  # skip non-qualifying ones
+
             simulation_num = scenario['Simulation Number']
             game_results = scenario['Game Results']
             for match_result in game_results:
@@ -156,7 +160,8 @@ def save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name):
                 winner = match_info[1].strip()
                 writer.writerow([simulation_num, match, winner])
 
-    print(f"Qualifying scenarios for {team_name} saved to {file_name}")
+    print(f"Qualifying scenarios for {team_name} (with ≥ {qualifying_points} points) saved to {file_name}")
+
 
 def save_all_simulations_to_csv(team_scenarios, file_name):
     # Use a set to track already saved simulation numbers
@@ -229,7 +234,7 @@ def main():
             save_file_input = input(f"Do you want to save the qualifying scenarios for {team_name} to a file? (yes/no): ").strip().lower()
             if save_file_input == 'yes':
                 file_name = input("Enter the name of the file to save results (e.g., qualifying_scenarios.csv): ").strip()
-                save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name)
+                save_qualifying_scenarios_to_csv(team_scenarios, team_name, file_name, qualifying_points)
         else:
             print(f"No qualifying scenarios found for {team_name}.")
 

@@ -2,7 +2,7 @@ import pandas as pd
 from collections import defaultdict
 
 # Load your all.csv
-df = pd.read_csv("all.csv")
+df = pd.read_csv("csk.csv")
 
 # Group by Simulation Number
 simulation_groups = df.groupby("Simulation Number")
